@@ -1,0 +1,27 @@
+# These data will be shown in /about page and every page footer
+# Replace these with your own personal info
+
+name: "JYO-JYO"
+job: ""
+hi: "YIPPEE"
+avatar_img: "/assets/img/me.png" # path to your avatar
+intro:
+  - "The more, the better"
+  - "No pain No gain"
+skills:
+  - name: "Programming"
+    icon-class: "fa fa-terminal"
+    list: ["Python", "Java", "C++", "SQL"]
+  - name: "Framework"
+    icon-class: "fa fa-th-list"
+    list: [""]
+  - name: "Tools"
+    icon-class: "fa fa-cogs"
+    list: ["Git"]
+
+display_name: "JYO-JYO"
+contact:
+  - {name: "Mobile", icon-class: "fa fa-phone-square", text: "123 4567 8910", link: "tel: 123 4567 8010"}
+  - {name: "Email", icon-class: "fa fa-envelope", text: "hyeom1027@gmail.com", link: "mailto: example@example.com"}
+social:
+  - {name: "GitHub", icon-class: "fa fa-github-square", text: "https://github.com", link: "https://github.com/jyo-jyo"}
