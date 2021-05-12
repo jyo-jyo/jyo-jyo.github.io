@@ -54,6 +54,7 @@ const reducers = (state = initialStates, actions) => {
 
 - 스토어(store) : 전역 상태 보관소
 >👉 모든 컴포넌트로 상태값을 공급
+
 ```javascript
 import { createStore } from 'redux';
 
@@ -68,8 +69,6 @@ export default create;
 이러한 리덕스에는 3가지 원칙이 존재하며, 반드시 지켜야한다.
 
 >1️⃣ Store는 유일하여야 한다.
-
->2️⃣ 상태값은 읽기만 가능하다.
-
+	>2️⃣ 상태값은 읽기만 가능하다.
 >3️⃣ 상태 값의 변경은 순수함수로만 가능하다.
 
