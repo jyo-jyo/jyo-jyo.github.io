@@ -51,6 +51,7 @@ const reducers = (state = initialStates, actions) => {
   }
 }
 ```
+
 - 스토어(store) : 전역 상태 보관소
 >👉 모든 컴포넌트로 상태값을 공급
 ```javascript
