@@ -16,13 +16,11 @@ React의 경우 부모 컴포넌트가 State 값을 관리하고, 하위 컴포�
 리덕스(redux)는 전역 상태 보관소 Store를 이용하여 모든 컴포넌트로 상태값을 공급한다.
 이를 통해, 리액트 구조의 단점을 보완할 수 있다.
 
-- 리덕스 구조
-1. 액션(action) : 상태 값에 어떠한 변화가 필요할 때 발생시킨다.
-
-👉 어떤 동작에 대해 선언되어진 객체
-
-👉 반드시 type 필드를 가져야함
-
+* 리덕스 구조
+- 액션(action) : 상태 값에 어떠한 변화가 필요할 때 발생시킨다.
+>👉 어떤 동작에 대해 선언되어진 객체
+>👉 반드시 type 필드를 가져야함
+```javascript
 // Action types
 export const TYPE_NAME = 'SIGN_OUT';
 // Action creators
@@ -31,11 +29,10 @@ export const actionCreators = () => {
         type: TYPE_NAME,
     }
 };
-
-2. 리듀서(reducer) : 상태 값에 변화를 일으키는 함수이다.
-
-👉 직접 일거리를 수행 = 순수함수
-
+```
+- 리듀서(reducer) : 상태 값에 변화를 일으키는 함수이다.
+>👉 직접 일거리를 수행 = 순수함수
+```javascript
 import * as Actions from '../actions/{action_file_name}';
 const reducers = (state = initialStates, actions) => {
   const { type } = actions;
@@ -53,11 +50,10 @@ const reducers = (state = initialStates, actions) => {
     }
   }
 }
-
-3. 스토어(store) : 전역 상태 보관소
-
-👉 모든 컴포넌트로 상태값을 공급
-
+```
+- 스토어(store) : 전역 상태 보관소
+>👉 모든 컴포넌트로 상태값을 공급
+```javascript
 import { createStore } from 'redux';
 
 const create = (reducers) => {
@@ -65,13 +61,13 @@ const create = (reducers) => {
 }
 
 export default create;
-
+```
 - dispatch : 스토어 값 업데이트 시 사용
 - subscribe: 스토어 값을 읽어올 때 사용
 
 이러한 리덕스에는 3가지 원칙이 존재하며, 반드시 지켜야한다.
 
-1️⃣ Store는 유일하여야 한다.
-2️⃣ 상태값은 읽기만 가능하다.
-3️⃣ 상태 값의 변경은 순수함수로만 가능하다.
+>1️⃣ Store는 유일하여야 한다.
+>2️⃣ 상태값은 읽기만 가능하다.
+>3️⃣ 상태 값의 변경은 순수함수로만 가능하다.
 
